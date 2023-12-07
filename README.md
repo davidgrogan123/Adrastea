@@ -5,21 +5,21 @@ A small highly extensible data transformation library written in .NET
 
 The following interfaces are exposed, along with several useful implementations of them.
 
-## Transformer
+### Transformer
 Defines a series of transformation steps to be applied to an input. The transformation steps will be chained togehter, so the output of one transformation forms the input to the next.
 
-## Transformation
+### Transformation
 A single step that can be applied by a transformer. There may be multiple transformation steps implemented by a single transformer.
 
 A single transformation can also contain additional transformers that can render different parts of a document.
 
-## TransformingContext
+### TransformingContext
 The context that is passed from one transformation to the next by a transformer. This is a simple container that allows more useful interfaces to be retrieved.
 
-## Matcher
+### Matcher
 Associated with a transformer, it decides whether or not a transformer should be executed for particular input. A hierarchy of matchers can be created if a transformation step needs to run for multiple conditions.
 
-## MatchingContext
+### MatchingContext
 The context of the data that is passed by the matchers to determine whether an associated transformer should run. This is a simple container that allows more useful interfaces to be retrieved.
 
 # Customization
